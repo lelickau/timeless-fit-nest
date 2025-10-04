@@ -32,7 +32,7 @@ export class TaskService {
   }
 
   create(dto: CreateTaskDto) {
-    const { title, description, priority, tags, enumTags } = dto;
+    const { title, description, priority, tags } = dto;
     const num = this.tasks.length + 1;
 
     const task = {
@@ -42,7 +42,6 @@ export class TaskService {
       description,
       priority,
       tags,
-      enumTags,
     };
 
     this.tasks.push(task);
